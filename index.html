@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silla 3D Interactiva - GitHub Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #e4e4e4, #a7a7a7, #222222);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .success-message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .url-display {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        
+        .qr-code {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: inline-block;
+        }
+        
+        .steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            max-width: 800px;
+        }
+        
+        .steps ol {
+            margin-left: 20px;
+        }
+        
+        .steps li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .file-structure {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            text-align: left;
+            margin: 15px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            max-width: 1000px;
+        }
+        
+        .test-area {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎉 ¡Tu Página está en GitHub Pages!</h1>
+        <p>Publicado exitosamente - Acceso gratuito para todos</p>
+    </header>
+
+    <div class="success-message">
+        <h2>✅ Publicación Exitosa</h2>
+        <p>Tu página web está ahora disponible para todo el mundo</p>
+        
+        <div class="url-display" id="current-url">
+            URL: https://tu-usuario.github.io/silla-3d-interactiva/
+        </div>
+        
+        <div class="qr-code">
+            <img id="qr-image" src="" alt="Código QR" width="200" height="200">
+        </div>
+        
+        <p>📱 Escanea el código QR para acceder desde tu móvil</p>
+    </div>
+
+    <div class="steps">
+        <h2>🔧 Próximos Pasos para tu Modelo 3D</h2>
+        <ol>
+            <li><strong>Sube tu archivo .xml.wr360</strong> a la carpeta <code>modelos/</code></li>
+            <li><strong>Verifica</strong> que el archivo se cargue correctamente</li>
+            <li><strong>Prueba</strong> el código QR con tu teléfono</li>
+            <li><strong>Comparte</strong> el enlace con otras personas</li>
+        </ol>
+        
+        <div class="file-structure">
+            silla-3d-interactiva/<br>
+            ├── index.html<br>
+            └── modelos/<br>
+                └── <strong>tu-silla.xml.wr360</strong> ← ¡Sube tu archivo aquí!
+        </div>
+    </div>
+
+    <div class="features-container">
+        <div class="feature">
+            <h3>🌐 Acceso Global</h3>
+            <p>Cualquier persona puede ver tu página sin descargar nada</p>
+        </div>
+        <div class="feature">
+            <h3>📱 Compatible Móvil</h3>
+            <p>Funciona perfectamente en teléfonos y tablets</p>
+        </div>
+        <div class="feature">
+            <h3>⚡ Rápido y Gratis</h3>
+            <p>GitHub Pages es completamente gratuito</p>
+        </div>
+    </div>
+
+    <div class="test-area">
+        <h3>🧪 Área de Pruebas</h3>
+        <p>Verifica que tu archivo 3D esté accesible:</p>
+        <button onclick="testModelFile()" style="
+            background: #fff;
+            color: #1a2a6c;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        ">Probar Archivo 3D</button>
+        <div id="test-result" style="margin-top: 15px;"></div>
+    </div>
+
+    <footer style="margin-top: 40px; opacity: 0.8;">
+        <p>🚀 Publicado con GitHub Pages • 💻 Código abierto • 🌍 Acceso gratuito</p>
+    </footer>
+
+    <script>
+        // Actualizar código QR con la URL actual
+        function updateQRCode() {
+            const currentUrl = window.location.href;
+            const qrImage = document.getElementById('qr-image');
+            const urlDisplay = document.getElementById('current-url');
+            
+            qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(currentUrl)}`;
+            urlDisplay.textContent = `URL: ${currentUrl}`;
+        }
+        
+        // Probar si el archivo 3D está accesible
+        async function testModelFile() {
+            const testResult = document.getElementById('test-result');
+            testResult.innerHTML = '<p>🔍 Probando archivo 3D...</p>';
+            
+            try {
+                const response = await fetch('modelos/tu-silla.xml.wr360');
+                if (response.ok) {
+                    testResult.innerHTML = '<p style="color: #90EE90;">✅ Archivo 3D encontrado y accesible</p>';
+                } else {
+                    testResult.innerHTML = '<p style="color: #FFB6C1;">❌ Archivo no encontrado. Sube tu archivo a la carpeta modelos/</p>';
+                }
+            } catch (error) {
+                testResult.innerHTML = `<p style="color: #FFB6C1;">❌ Error: ${error.message}</p>`;
+            }
+        }
+        
+        // Ejecutar cuando cargue la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateQRCode();
+            console.log('✅ Página cargada en:', window.location.href);
+        });
+    </script>
+</body>
+</html>

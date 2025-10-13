@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <projectName>NewProject</projectName>
+  <projectConfig>D:\NewProject\NewProject.xml</projectConfig>
+  <interface>
+    <clipboxPreview>True</clipboxPreview>
+    <clipboxFitImages>True</clipboxFitImages>
+    <showCenterGuide>False</showCenterGuide>
+    <showGridGuide>False</showGridGuide>
+    <showImageEdges>False</showImageEdges>
+    <showToolbarGuide>False</showToolbarGuide>
+    <lockWatermarks>False</lockWatermarks>
+    <spotWheelSpeedDown>False</spotWheelSpeedDown>
+    <hideInactiveSpotPath>False</hideInactiveSpotPath>
+    <hideInactiveSpot>False</hideInactiveSpot>
+    <showSpotMagnify>False</showSpotMagnify>
+    <spotMagnifyZoom>2</spotMagnifyZoom>
+    <useAutoPath>False</useAutoPath>
+  </interface>
+  <publishing>
+    <publishPath>D:\NewProject\published</publishPath>
+    <viewName>Silla web</viewName>
+    <skinType>0</skinType>
+    <viewerWidth>475</viewerWidth>
+    <viewerHeight>450</viewerHeight>
+    <imageScale>1</imageScale>
+    <imageFormat>1</imageFormat>
+    <jpgQuality>94</jpgQuality>
+    <jpgQualityHighres>94</jpgQualityHighres>
+    <webpQuality>90</webpQuality>
+    <webpQualityHighres>90</webpQualityHighres>
+    <cropMarginScale>4</cropMarginScale>
+    <cropMarginTop>0</cropMarginTop>
+    <cropMarginLeft>0</cropMarginLeft>
+    <cropMarginBottom>0</cropMarginBottom>
+    <cropMarginRight>0</cropMarginRight>
+    <cropFillColor>-1</cropFillColor>
+    <viewerBackColor>-197380</viewerBackColor>
+    <hideWatermarks>False</hideWatermarks>
+    <fittedImages>True</fittedImages>
+    <skipImagePublishing>False</skipImagePublishing>
+    <launchLocalBrowser>True</launchLocalBrowser>
+    <launchRemotelBrowser>False</launchRemotelBrowser>
+    <testBrowser>Opera Stable</testBrowser>
+    <publishTemplate>Responsive</publishTemplate>
+    <loopGif>True</loopGif>
+    <publishGifPath>
+    </publishGifPath>
+    <gifLoopPeriod>0</gifLoopPeriod>
+    <gifQuality>16</gifQuality>
+    <launchGifInBrowser>True</launchGifInBrowser>
+    <zipFolder>
+    </zipFolder>
+    <zipSKU>
+    </zipSKU>
+    <zipFolderOpen>True</zipFolderOpen>
+    <zipForAmazon>False</zipForAmazon>
+    <zipImgQuality>94</zipImgQuality>
+    <zipFormat>1</zipFormat>
+    <zipReverseOrder>False</zipReverseOrder>
+    <useGAEventTracking>False</useGAEventTracking>
+    <addGATrackingScript>False</addGATrackingScript>
+    <GATrackingAlias>
+    </GATrackingAlias>
+    <GATrackingScriptId>
+    </GATrackingScriptId>
+    <createPixriotMeta>True</createPixriotMeta>
+    <projectFileMonitor>False</projectFileMonitor>
+  </publishing>
+  <canvas>
+    <canvasItem>
+      <type>Spotter.TextWatermark</type>
+      <positionX>881.7778</positionX>
+      <positionY>1186.133</positionY>
+      <angle>0</angle>
+      <border>9</border>
+      <borderColor>-1526726656</borderColor>
+      <text>
+      </text>
+      <color>1644167167</color>
+      <blur>76</blur>
+      <fontFamily>Tahoma</fontFamily>
+      <fontSize>78</fontSize>
+      <fontStyle>Bold</fontStyle>
+    </canvasItem>
+  </canvas>
+  <effects />
+  <connections>
+    <activeConnection>Do not upload</activeConnection>
+  </connections>
+  <hotspots />
+</settings>
