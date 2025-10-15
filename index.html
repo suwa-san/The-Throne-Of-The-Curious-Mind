@@ -29,7 +29,6 @@
             border-radius: 15px;
             margin: 20px 0;
             max-width: 800px;
-            backdrop-filter: blur(10px);
         }
         
         .url-display {
@@ -104,76 +103,24 @@
 </head>
 <body>
     <header>
-        <h1>🎉 ¡Tu Página está en GitHub Pages!</h1>
-        <p>Publicado exitosamente - Acceso gratuito para todos</p>
+        <h1>The Throne of Curiosity</h1>
     </header>
 
     <div class="success-message">
-        <h2>✅ Publicación Exitosa</h2>
+        <h2>Publicación Exitosa</h2>
         <p>Tu página web está ahora disponible para todo el mundo</p>
         
         <div class="url-display" id="current-url">
-            URL: https://tu-usuario.github.io/silla-3d-interactiva/
+            https://suwa-san.github.io/The-Throne-Of-The-Curious-Mind/
         </div>
         
         <div class="qr-code">
             <img id="qr-image" src="" alt="Código QR" width="200" height="200">
         </div>
         
-        <p>📱 Escanea el código QR para acceder desde tu móvil</p>
+        <p>Escanea el código QR para acceder desde tu móvil</p>
     </div>
 
-    <div class="steps">
-        <h2>🔧 Próximos Pasos para tu Modelo 3D</h2>
-        <ol>
-            <li><strong>Sube tu archivo .xml.wr360</strong> a la carpeta <code>modelos/</code></li>
-            <li><strong>Verifica</strong> que el archivo se cargue correctamente</li>
-            <li><strong>Prueba</strong> el código QR con tu teléfono</li>
-            <li><strong>Comparte</strong> el enlace con otras personas</li>
-        </ol>
-        
-        <div class="file-structure">
-            silla-3d-interactiva/<br>
-            ├── index.html<br>
-            └── modelos/<br>
-                └── <strong>tu-silla.xml.wr360</strong> ← ¡Sube tu archivo aquí!
-        </div>
-    </div>
-
-    <div class="features-container">
-        <div class="feature">
-            <h3>🌐 Acceso Global</h3>
-            <p>Cualquier persona puede ver tu página sin descargar nada</p>
-        </div>
-        <div class="feature">
-            <h3>📱 Compatible Móvil</h3>
-            <p>Funciona perfectamente en teléfonos y tablets</p>
-        </div>
-        <div class="feature">
-            <h3>⚡ Rápido y Gratis</h3>
-            <p>GitHub Pages es completamente gratuito</p>
-        </div>
-    </div>
-
-    <div class="test-area">
-        <h3>🧪 Área de Pruebas</h3>
-        <p>Verifica que tu archivo 3D esté accesible:</p>
-        <button onclick="testModelFile()" style="
-            background: #fff;
-            color: #1a2a6c;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            margin: 10px;
-            font-weight: bold;
-        ">Probar Archivo 3D</button>
-        <div id="test-result" style="margin-top: 15px;"></div>
-    </div>
-
-    <footer style="margin-top: 40px; opacity: 0.8;">
-        <p>🚀 Publicado con GitHub Pages • 💻 Código abierto • 🌍 Acceso gratuito</p>
-    </footer>
 
     <script>
         // Actualizar código QR con la URL actual
@@ -194,19 +141,19 @@
             try {
                 const response = await fetch('modelos/tu-silla.xml.wr360');
                 if (response.ok) {
-                    testResult.innerHTML = '<p style="color: #90EE90;">✅ Archivo 3D encontrado y accesible</p>';
+                    testResult.innerHTML = '<p style="color: #90EE90;">Archivo 3D encontrado y accesible</p>';
                 } else {
-                    testResult.innerHTML = '<p style="color: #FFB6C1;">❌ Archivo no encontrado. Sube tu archivo a la carpeta modelos/</p>';
+                    testResult.innerHTML = '<p style="color: #FFB6C1;">Archivo no encontrado. Sube tu archivo a la carpeta modelos/</p>';
                 }
             } catch (error) {
-                testResult.innerHTML = `<p style="color: #FFB6C1;">❌ Error: ${error.message}</p>`;
+                testResult.innerHTML = `<p style="color: #FFB6C1;">Error: ${error.message}</p>`;
             }
         }
         
         // Ejecutar cuando cargue la página
         document.addEventListener('DOMContentLoaded', function() {
             updateQRCode();
-            console.log('✅ Página cargada en:', window.location.href);
+            console.log('Página cargada en:', window.location.href);
         });
     </script>
 </body>
