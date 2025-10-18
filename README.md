@@ -1,0 +1,2 @@
+Con el pasar del tiempo los conceptos han variado, se han abierto, se han expandido. Esta obra tiene como objetivo ser un puente entre épocas. Es un proyecto personal, la recopilación de temas a los que acudo día a día, ya sean dudas, frases de libros que me han marcado e incluso reglas gramaticales de los idiomas que hablo (Español, Inglés, Portugués, Ruso y Japonés)
+Esta silla no deja de ser una silla si no te puedes sentar en ella, pasa a ser un concepto, un símbolo gracias a su esencia.
